@@ -47,7 +47,7 @@ const ExpenseItem = (props) => {
         <td>{currency}{props.cost}</td>
         <td><span><IoMdAddCircle style={{color:'green'}} size='2em' onClick={event=> increaseAllocation(props.name)}/></span></td>
         <td><span><FaCircleMinus style={{color:'red'}} size='1.5em' onClick={event=> decreaseAllocation(props.name)} /></span></td>
-        <td><TiDelete size='2em' onClick={handleDeleteExpense}></TiDelete></td>
+        <td><TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
         </tr>
     );
 };

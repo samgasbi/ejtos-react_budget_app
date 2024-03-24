@@ -17,6 +17,8 @@ const Budget = () => {
        
         return newBudget;
     }else if (newBudget >= 20000){
+        alert("The value cannot exceed maximum available funds  "+{currency}+'20,000');
+               
         return 20000;
     }else {
         return totExpenses || '';

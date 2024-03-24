@@ -14,7 +14,7 @@ const AllocationForm = (props) => {
         event.preventDefault();
 
         if(cost > remaining) {
-                alert("The value cannot exceed remaining funds  £"+remaining);
+                alert("The value cannot exceed remaining funds  "+currency+remaining);
                 setCost("");
                 return;
             }
@@ -71,12 +71,13 @@ const AllocationForm = (props) => {
                   </div>
                     <input
                         required='required'
-                        type='number'
+                        type="number"
                         id='cost'
+                        min={0}
                         step={10}
                         value={cost}
                         style={{ marginLeft: '2rem' , size: 10}}
-                        onChange={(event) => setCost(event.target.value)}>
+                        onChange={(event) => setCost(parseInt(event.target.value)<0?0:parseInt(event.target.value))}>
                         </input>
 
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
